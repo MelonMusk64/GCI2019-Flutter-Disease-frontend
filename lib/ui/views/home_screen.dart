@@ -30,13 +30,10 @@ class _HomeScreenState extends State<HomeScreen> {
     var result = await Connectivity().checkConnectivity();
     if (result == ConnectivityResult.none) {
       _showStatus("You're not connected to a network");
-      //status = "You're not connected to a network";
     } else if (result == ConnectivityResult.mobile) {
       _showStatus("You're connected over mobile data");
-      //status = "You're connected over mobile data";
     } else if (result == ConnectivityResult.wifi) {
       _showStatus("You're connected over wifi");
-      //status = "You're connected over wifi";
     }
 
     return Text(status);
